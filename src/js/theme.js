@@ -5,21 +5,18 @@ const Theme = {
 
   const bodyRef = document.querySelector('body');
   let themeSwitchToggleRef = document.querySelector('#theme-switch-toggle');
-  
-  themeSwitchToggleRef.onclick = function() {
-    bodyRef.classList.toggle(Theme.DARK);
+
+  themeSwitchToggleRef.addEventListener('change', themesChange);
+
+  function themesChange () {  
+    if (themeSwitchToggleRef.checked !== true) {
+      bodyRef.classList.remove(Theme.DARK); 
+      bodyRef.classList.add(Theme.LIGHT);
+      // themeSwitchToggleRef.removeEventListener;
+    }
+    else {
+      bodyRef.classList.remove(Theme.LIGHT); 
+      bodyRef.classList.add(Theme.DARK);
+      // themeSwitchToggleRef.removeEventListener;
+    }
   }
-//   console.log(themeSwitchToggleRef);
-  
-//   bodyRef.classList.add(Theme.DARK);
-//   bodyRef.setAttribute('class', Theme.DARK)
-//   console.dir(bodyRef);
-  // if (themeSwitchToggleRef) {
-  //   bodyRef.classList.remove(Theme.DARK); 
-  //   bodyRef.classList.add(Theme.LIGHT);
-  //   console.log(Theme.LIGHT);
-  // }
-  // else {
-  //   bodyRef.classList.remove(Theme.LIGHT); 
-  //   bodyRef.classList.add(Theme.DARK);
-  // }
