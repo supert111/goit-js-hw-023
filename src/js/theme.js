@@ -22,18 +22,17 @@ const Theme = {
       themeSaved (Theme.DARK);
     }
   };
-//Функция сохраняет тему которую выбрал user
+//Функция сохраняет тему которую выбрал user в localStorage
   function themeSaved (event) {
     localStorage.setItem('ThemeOn', JSON.stringify(event));
   };
-//Выбранная тема сохраняется в localStorage
+//localStorage
   const savedTheme = localStorage.getItem('ThemeOn');
   if(savedTheme) {
     const parsedSettings = JSON.parse(savedTheme);
     bodyRef.setAttribute('class', parsedSettings);
     if(parsedSettings === Theme.DARK) {
       themeSwitchToggleRef.checked = true;
-      console.log(themeSwitchToggleRef)
     }
   }
 
