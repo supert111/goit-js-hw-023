@@ -3,13 +3,17 @@ const Theme = {
     DARK: 'dark-theme',
   };
 
-//   const themeSwitchToggleRef = document.querySelector('#theme-switch-toggle');
+  const bodyRef = document.querySelector('body');
+  let themeSwitchToggleRef = document.querySelector('#theme-switch-toggle');
+  
+  themeSwitchToggleRef.onclick = function() {
+    bodyRef.classList.toggle(Theme.DARK);
+  }
 //   console.log(themeSwitchToggleRef);
   
-  const bodyRef = document.querySelector('body');
-  bodyRef.classList.add(Theme.DARK);
-  bodyRef.setAttribute('class', Theme.DARK)
-  console.dir(bodyRef);
+//   bodyRef.classList.add(Theme.DARK);
+//   bodyRef.setAttribute('class', Theme.DARK)
+//   console.dir(bodyRef);
   // if (themeSwitchToggleRef) {
   //   bodyRef.classList.remove(Theme.DARK); 
   //   bodyRef.classList.add(Theme.LIGHT);
