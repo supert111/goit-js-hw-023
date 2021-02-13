@@ -1,15 +1,17 @@
 import './styles.css';
 import './menu.json';
 
-// const Theme = {
-//     LIGHT: 'light-theme',
-//     DARK: 'dark-theme',
-//   };
+console.log(menu.json)
+const Theme = {
+    LIGHT: 'light-theme',
+    DARK: 'dark-theme',
+  };
 
 //   const themeSwitchToggleRef = document.querySelector('#theme-switch-toggle');
 //   console.log(themeSwitchToggleRef);
   
-//   const bodyRef = document.querySelector('body');
+//   const bodyRef = document.querySelector('.theme-switch');
+//   bodyRef.setAttribute('class', Theme.DARK)
 //   console.dir(bodyRef);
 //   if (themeSwitchToggleRef) {
 //     bodyRef.classList.remove(Theme.DARK); 
