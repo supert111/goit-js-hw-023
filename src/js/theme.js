@@ -33,7 +33,6 @@ const Theme = {
     bodyRef.setAttribute('class', parsedSettings);
     if(parsedSettings === Theme.DARK) {
       themeSwitchToggleRef.checked = true;
-      console.log(themeSwitchToggleRef)
     }
   }
 
