@@ -1,0 +1,1 @@
+import itemsThemplate from '../templates/gallery-items.hbs';
